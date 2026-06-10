@@ -20,6 +20,11 @@ instructor gave you):
 }
 ```
 
+> **Keep `student.json` identical across all your activities.** The autograder
+> cross-checks these fields between your repos, and a mismatch (e.g. a different
+> `classCode` in one activity) is flagged. The `classCode` must also match the
+> one in your repo name.
+
 ### 2. Write the program
 
 Open [`bin/age.dart`](bin/age.dart). The program must:
@@ -38,6 +43,29 @@ Run it yourself:
 dart run bin/age.dart
 ```
 
+## Set up your repo
+
+Before you write any code, create **your own copy** of this activity from the
+template. Do not work in the template itself.
+
+1. **Create from the template.** Open the template repo and click
+   **Use this template → Create a new repository**.
+2. **Set the owner to the course org.** Under *Owner*, choose the **`HAU-6ADET`
+   course org**, **not** your personal account.
+3. **Name it by the convention** `m<module>a<activity>-<classcode>-<yourname>`.
+   For this activity that's **`m1a3-<classcode>-yourname`** (e.g.
+   `m1a3-1234-juandelacruz`). The `<classcode>` must match the one you put in
+   `student.json`.
+4. **Make it Private.** Set *Visibility* to **Private** so classmates can't see
+   your work.
+
+Then clone **your** new repo and work there:
+
+```bash
+git clone https://github.com/HAU-6ADET/m1a3-<classcode>-yourname.git
+cd m1a3-<classcode>-yourname
+```
+
 ## Running the test
 
 ```bash
@@ -54,9 +82,10 @@ This activity is graded by **8 tests** (1 point each). They check:
 Each part is graded independently, so you earn partial credit for the parts
 you finish.
 
-## Submitting on Canvas
+## Confirm your submission
 
-When the test passes locally, **commit and push**:
+Your repo **is** your submission, so there is nothing to upload anywhere. When the
+test passes locally, **commit and push** so your work is recorded:
 
 ```bash
 git add -A
@@ -64,13 +93,8 @@ git commit -m "Activity 3 complete"
 git push
 ```
 
-Pushing triggers the **Autograde** workflow. To confirm it passed:
+Pushing triggers the **Autograde** workflow. Confirm your submission landed:
 
 1. Open your repo on GitHub and click the **Actions** tab.
 2. Open the latest **Autograde** run and confirm the green ✅ check
    and the "8 / 8 tests passed" summary.
-
-Then submit **both** on Canvas:
-
-1. **A screenshot** of the green Autograde run.
-2. **The link to that Actions run** (copy the URL from your browser).
